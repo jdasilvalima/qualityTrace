@@ -21,10 +21,17 @@ WIP
 
 ## II. PROJECT SETUP
 ### II.1 Requirements
-WIP
+- [Docker](https://www.docker.com/) neeeds to be installed
 
 ### II.2 BACKEND
-WIP
+```bash
+  cd .\backend\
+  docker build -t qualitytrace-backend .
+  docker run -p 8080:8080 --rm -v ${PWD}:/app -v /app/tmp --name qualitytrace-api-go-air qualitytrace-backend
+```
 
 ### II.3 FRONTEND
 WIP
+
+## III. REFERENCES
+- Air - [Live reload for Go apps](https://github.com/air-verse/air)
