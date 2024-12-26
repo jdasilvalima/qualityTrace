@@ -1,1 +1,30 @@
-"# qualityTrace" 
+# Quality Trace
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?&style=for-the-badge&logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jdasilvalima/qualityTrace?style=for-the-badge)
+[![GitHub last commit](https://img.shields.io/github/last-commit/jdasilvalima/qualityTrace?style=for-the-badge)](https://github.com/jdasilvalima/qualityTrace/commits)
+
+## I. PROJECT DESCRIPTION
+### I.1 Introduction
+QualityTrace is a real-time inventory and quality traceability system designed for the food industry. Built with Go and GraphQL, it empowers companies to track product batches from receiving to distribution, ensure compliance with safety standards, and manage stock levels efficiently. With features like expiration alerts, quality control logs, and supplier traceability, QualityTrace helps streamline operations and reduce waste.
+
+### I.2 Goals
+- Deepen my knowledge of **Go** and its concurrency model to build efficient, scalable systems.
+- Gain hands-on experience with **GraphQL**, mastering query design, schema development, and optimization for complex data relationships.
+- Explore integration of in-memory databases like **Redis** for caching, session management, and real-time notifications.
+
+### I.3 Web Application Overview
+WIP
+
+## II. PROJECT SETUP
+### II.1 Requirements
+WIP
+
+### II.2 BACKEND
+WIP
+
+### II.3 FRONTEND
+WIP
