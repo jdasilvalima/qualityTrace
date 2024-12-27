@@ -1,0 +1,82 @@
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  status: UserStatus!
+}
+
+enum UserStatus {
+  ADMIN
+  OPERATOR
+}
+
+type Supplier {
+  id: ID!
+  name: String!
+  email: String!
+}
+
+type Ingredient {
+  id: ID!
+  type: IngredientType!
+  number: String!
+  name: String!
+  unitTypeReceived: String!
+  quantityPerUnit: Float!
+  finalUnit: String!
+}
+
+enum IngredientType {
+  RAW_MATERIAL
+  PACKAGING
+}
+
+type IngredientReceived {
+  id: ID!
+  ingredient: Ingredient!
+  unitsReceived: Int!
+  lotNumber: String!
+  expirationDate: String!
+  unitType: String!
+  quantityReceived: Float!
+  unitOfMeasure: String!
+  supplier: Supplier!
+  user: User!
+  receiveDate: String!
+  invoiceNumber: String!
+}
+
+type Query {
+  ingredients: [Ingredient!]!
+  ingredient(id: ID!): Ingredient
+  suppliers: [Supplier!]!
+  supplier(id: ID!): Supplier
+  users: [User!]!
+  user(id: ID!): User
+  ingredientsReceived: [IngredientReceived!]!
+  ingredientReceived(id: ID!): IngredientReceived
+}
+
+input CreateIngredientInput {
+  type: IngredientType!
+  number: String!
+  name: String!
+  unitTypeReceived: String!
+  quantityPerUnit: Float!
+  finalUnit: String!
+}
+
+input UpdateIngredientInput {
+  type: IngredientType
+  number: String
+  name: String
+  unitTypeReceived: String
+  quantityPerUnit: Float
+  finalUnit: String
+}
+
+type Mutation {
+  createIngredient(input: CreateIngredientInput!): Ingredient!
+  updateIngredient(id: ID!, input: UpdateIngredientInput!): Ingredient!
+  deleteIngredient(id: ID!): Boolean!
+}

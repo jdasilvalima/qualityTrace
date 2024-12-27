@@ -35,3 +35,6 @@ WIP
 
 ## III. REFERENCES
 - Air - [Live reload for Go apps](https://github.com/air-verse/air)
+- Standard Go Project Layout - [Github](https://github.com/golang-standards/project-layout)
+- graphql-go [Tutorial](https://www.howtographql.com/graphql-go/0-introduction/)
+https://www.apollographql.com/blog/using-graphql-with-golang

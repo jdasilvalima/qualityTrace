@@ -1,0 +1,30 @@
+{
+  "ingredientsReceived": [
+    {
+      "id": "1",
+      "ingredientId": "1",
+      "unitsReceived": 10,
+      "lotNumber": "LOT123",
+      "expirationDate": "2024-12-31T00:00:00Z",
+      "unitType": "Bag",
+      "quantityReceived": 250.0,
+      "unitOfMeasure": "kg",
+      "supplierId": "1",
+      "userId": "1",
+      "receiveDate": "2024-03-20T10:00:00Z",
+      "invoiceNumber": "INV001"
+    }
+  ],
+  "ingredients": [
+    { "id": 1, "ingredientNumber": "RM001", "name": "Flour", "type": "RAW_MATERIAL", "unitType": "Kg", "finalUnit": "Lbs" },
+    { "id": 2, "ingredientNumber": "PK001", "name": "Plastic Wrap", "type": "PACKAGING", "unitType": "Bag", "finalUnit": "Lbs" }
+  ],
+  "suppliers": [
+    { "id": 1, "name": "Supplier A", "email": "supplierA@example.com" },
+    { "id": 2, "name": "Supplier B", "email": "supplierB@example.com" }
+  ],
+  "users": [
+    { "id": 1, "firstName": "John", "lastName": "Doe", "status": "ADMIN" },
+    { "id": 2, "firstName": "Jane", "lastName": "Smith", "status": "OPERATOR" }
+  ]
+}
