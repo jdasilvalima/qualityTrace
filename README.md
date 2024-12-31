@@ -34,8 +34,15 @@ WIP
 WIP
 
 ## III. REFERENCES
+### III.1 LINKS
 - Air - [Live reload for Go apps](https://github.com/air-verse/air)
 - Standard Go Project Layout - [Github](https://github.com/golang-standards/project-layout)
 - graphql-go [Tutorial](https://www.howtographql.com/graphql-go/0-introduction/)
 - [gqlgen](https://gqlgen.com/) is a library for creating GraphQL applications in Go.
 - Example of go / graphql project on [graphql-golang](https://github.com/howtographql/graphql-golang) repository
+
+### III.2 COMMANDS
+```bash
+  go run github.com/99designs/gqlgen generate
+  go run server.go
+```
