@@ -32,7 +32,16 @@ func (r *queryResolver) Ingredients(ctx context.Context) ([]*model.Ingredient, e
 
 // Ingredient is the resolver for the ingredient field.
 func (r *queryResolver) Ingredient(ctx context.Context, id string) (*model.Ingredient, error) {
-	panic(fmt.Errorf("not implemented: Ingredient - ingredient"))
+	dummyIngredient := &model.Ingredient{
+		ID:              id,
+		Type:            model.IngredientTypeRawMaterial,
+		Number:          "12345",
+		Name:            "Flour",
+		UnitTypeReceived: "Bag",
+		QuantityPerUnit:  25.0,
+		FinalUnit:        "kg",
+	}
+	return dummyIngredient, nil
 }
 
 // Suppliers is the resolver for the suppliers field.
@@ -48,27 +57,82 @@ func (r *queryResolver) Suppliers(ctx context.Context) ([]*model.Supplier, error
 
 // Supplier is the resolver for the supplier field.
 func (r *queryResolver) Supplier(ctx context.Context, id string) (*model.Supplier, error) {
-	panic(fmt.Errorf("not implemented: Supplier - supplier"))
+	dummySupplier := &model.Supplier{
+		ID:    id,
+		Name:  "EggySupplier",
+		Email: "eggy@outlook.com",
+	}
+	return dummySupplier, nil
 }
 
 // Users is the resolver for the users field.
 func (r *queryResolver) Users(ctx context.Context) ([]*model.User, error) {
-	panic(fmt.Errorf("not implemented: Users - users"))
+	dummyUsers := []*model.User{
+		{
+			ID:        "1",
+			FirstName: "John",
+			LastName:  "Doe",
+			Status:    model.UserStatusAdmin,
+		},
+		{
+			ID:        "2",
+			FirstName: "Jane",
+			LastName:  "Smith",
+			Status:    model.UserStatusOperator,
+		},
+	}
+	return dummyUsers, nil
 }
 
 // User is the resolver for the user field.
 func (r *queryResolver) User(ctx context.Context, id string) (*model.User, error) {
-	panic(fmt.Errorf("not implemented: User - user"))
+	dummyUser := &model.User{
+		ID:        id,
+		FirstName: "John",
+		LastName:  "Doe",
+		Status:    model.UserStatusAdmin,
+	}
+	return dummyUser, nil
 }
 
 // IngredientsReceived is the resolver for the ingredientsReceived field.
 func (r *queryResolver) IngredientsReceived(ctx context.Context) ([]*model.IngredientReceived, error) {
-	panic(fmt.Errorf("not implemented: IngredientsReceived - ingredientsReceived"))
+	dummyIngredientsReceived := []*model.IngredientReceived{
+		{
+			ID:             "1",
+			Ingredient:     &model.Ingredient{Name: "Flour"},
+			UnitsReceived:  10,
+			LotNumber:      "LOT123",
+			ExpirationDate: "2025-01-01",
+			UnitType:       "Bag",
+			QuantityReceived: 250.0,
+			UnitOfMeasure:  "kg",
+			Supplier:       &model.Supplier{Name: "EggySupplier"},
+			User:           &model.User{FirstName: "John", LastName: "Doe"},
+			ReceiveDate:    "2024-12-26",
+			InvoiceNumber:  "INV123",
+		},
+	}
+	return dummyIngredientsReceived, nil
 }
 
 // IngredientReceived is the resolver for the ingredientReceived field.
 func (r *queryResolver) IngredientReceived(ctx context.Context, id string) (*model.IngredientReceived, error) {
-	panic(fmt.Errorf("not implemented: IngredientReceived - ingredientReceived"))
+	dummyIngredientReceived := &model.IngredientReceived{
+		ID:             id,
+		Ingredient:     &model.Ingredient{Name: "Flour"},
+		UnitsReceived:  10,
+		LotNumber:      "LOT123",
+		ExpirationDate: "2025-01-01",
+		UnitType:       "Bag",
+		QuantityReceived: 250.0,
+		UnitOfMeasure:  "kg",
+		Supplier:       &model.Supplier{Name: "EggySupplier"},
+		User:           &model.User{FirstName: "John", LastName: "Doe"},
+		ReceiveDate:    "2024-12-26",
+		InvoiceNumber:  "INV123",
+	}
+	return dummyIngredientReceived, nil
 }
 
 // Mutation returns MutationResolver implementation.
