@@ -40,6 +40,7 @@ WIP
 - graphql-go [Tutorial](https://www.howtographql.com/graphql-go/0-introduction/)
 - [gqlgen](https://gqlgen.com/) is a library for creating GraphQL applications in Go.
 - Example of go / graphql project on [graphql-golang](https://github.com/howtographql/graphql-golang) repository
+- [Database migrations](https://github.com/golang-migrate/migrate)  written in Go
 
 ### III.2 COMMANDS
 ```bash
